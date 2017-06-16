@@ -48,6 +48,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="p4api.net, Version=2016.2.147.9832, Culture=neutral, PublicKeyToken=f6b9b9d036c873e1, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SSRS_SelfService\SSRS_SelfService\bin\p4api.net.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -76,9 +80,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <Content Include="DepotList.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="P4Directory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DepotList.aspx.cs">
+      <DependentUpon>DepotList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepotList.aspx.designer.cs">
+      <DependentUpon>DepotList.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
