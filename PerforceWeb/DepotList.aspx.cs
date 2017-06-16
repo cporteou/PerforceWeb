@@ -153,5 +153,18 @@ namespace PerforceWeb
                 }
             }
         }
+
+        //Method for shortening P4 filepath
+        static string p4fileShort(string p4filepath)
+        {
+            int index = p4filepath.LastIndexOf("/");
+            int len = p4filepath.Length;
+            len = len - index;
+            if (index > 0)
+                p4filepath = p4filepath.Substring(index, len);
+
+            return p4filepath;
+
+        }
     }
 }
